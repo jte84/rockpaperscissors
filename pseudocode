@@ -1,0 +1,7 @@
+Get choice from computer
+Three options to randomly pick (rock, paper, scissors)
+Get selection from player
+Three options to choose from
+Once both selections are made we can see who wins
+Rock beats scissors, scissors beats paper, paper beats rock
+Determine the winner
