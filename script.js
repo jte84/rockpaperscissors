@@ -1,12 +1,32 @@
 function getComputerChoice() {
-    const randomNumber = Math.floor(Math.random() * 3);
-    if (randomNumber === 0) {
+    const computerChoice = Math.floor(Math.random() * 3);
+    if (computerChoice === 0) {
       return "rock";
-    } else if (randomNumber === 1) {
+    } else if (computerChoice === 1) {
       return "scissors";
-    } else (randomNumber === 2)
+    } else (computerChoice === 2)
     return "paper";
   }
 
-  console.log(getComputerChoice())
+  function getPlayerChoice ()   {
+    let playerChoice = prompt ('Enter rock, paper or scissors');
+    return playerChoice.toLowerCase()
+  }
+
+  function playRound(playerChoice, computerChoice) {
+    if (playerChoice === computerChoice) {
+        return "Draw"
+    }   else if (playerChoice === 'rock' && computerChoice === 'scissors')   {
+        return "You Win!"
+    }   else if (playerChoice === 'paper' && computerChoice === 'rock')   {
+        return "You Win!"
+    }   else if (playerChoice === 'scissors' && computerChoice === 'paper')  {
+        return "You Win!"
+    }   else {
+        return "You Lose!"
+    }
+
+  }
+
+  console.log(playRound(getPlayerChoice(),getComputerChoice()))
   
